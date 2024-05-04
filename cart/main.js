@@ -1,24 +1,20 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+const buscaImagens = async () => {
+  try {
+    const data = await fetch(
+      "https://pixabay.com/api/?key=43716968-76e635a21b2ecccf526a280a2&q=car&image_type=photo&per_page=8"
+    );
+    const response = await data.json();
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+    console.log(response);
+    response.hits.forEach((element) => {
+      const { webformatURL } = element;
+      console.log(webformatURL);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-setupCounter(document.querySelector('#counter'))
+buscaImagens();
+
+

@@ -1,0 +1,34 @@
+[
+    {
+        "marca": "Toyota",
+        "valor": 30000
+    },
+    {
+        "marca": "Honda",
+        "valor": 28000
+    },
+    {
+        "marca": "Ford",
+        "valor": 32000
+    },
+    {
+        "marca": "Chevrolet",
+        "valor": 27000
+    },
+    {
+        "marca": "Volkswagen",
+        "valor": 29000
+    },
+    {
+        "marca": "BMW",
+        "valor": 40000
+    },
+    {
+        "marca": "Mercedes-Benz",
+        "valor": 45000
+    },
+    {
+        "marca": "Audi",
+        "valor": 42000
+    }
+]
